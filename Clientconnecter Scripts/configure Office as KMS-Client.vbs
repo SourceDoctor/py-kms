@@ -45,6 +45,12 @@ Select Case ProductName
 	Case "Microsoft Office 2016 Standard"
 		kms_serial = "JNRGM-WHDWX-FJJG3-K47QV-DRTFM"
 
+' Office 2019 ----------------------------------------
+	Case "Microsoft Office 2019 Professional Plus"
+		kms_serial = "NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP"
+	Case "Microsoft Office 2019 Standard"
+		kms_serial = "6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK"
+
 ' Sharepoint Workspace 2010 ----------------------------------------
     Case "Microsoft SharePoint Workspace 2010"
 		kms_serial = "QYYW6-QP4CB-MBV6G-HYMCJ-4T3J4"
@@ -131,6 +137,30 @@ Select Case ProductName
     Case "Microsoft Word 2016"
 		kms_serial = "WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6"
 
+' Office 2019 Products ----------------------------------------
+    Case "Microsoft Project 2019 Professional"
+		kms_serial = "B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B"
+    Case "Microsoft Project 2019 Standard"
+		kms_serial = "C4F7P-NCP8C-6CQPT-MQHV9-JXD2M"
+    Case "Microsoft Visio 2019 Professaional"
+		kms_serial = "9BGNQ-K37YR-RQHF2-38RQ3-7VCBB"
+    Case "Microsoft Visio 2019 Standard"
+		kms_serial = "7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2"
+    Case "Microsoft Access 2019"
+		kms_serial = "9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT"
+    Case "Microsoft Excel 2019"
+		kms_serial = "TMJWT-YYNMB-3BKTF-644FC-RVXBD"
+    Case "Microsoft Outlook 2019"
+		kms_serial = "7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK"
+    Case "Microsoft PowerPoint 2019"
+		kms_serial = "RRNCX-C64HY-W2MM7-MCH9G-TJHMQ"
+    Case "Microsoft Publisher 2019"
+		kms_serial = "G2KWX-3NW6P-PY93R-JXK2T-C9Y9V"
+    Case "Microsoft Skype for Business 2019"
+		kms_serial = "NCJ33-JHBBY-HTK98-MYCV8-HMKHJ"
+    Case "Microsoft Word 2019"
+		kms_serial = "PBX3G-NWMT6-Q7XBW-PYJGG-WXD33"
+
     Case Else
 		Msgbox ("Abbruch: kein unterstütztes Office Produkt gefunden! ->" + ProductName)
 		WScript.Quit
@@ -144,7 +174,7 @@ If objFSO.FolderExists(OfficePath) Then
 			Msgbox ("setze KMS Server auf Autodetect ...")
 			oShell.run "cscript " + KMSScript + " /remhst",1,True
 		else
-			Msgbox ("schreibe Adresse des KMS Server in die Registry ...")		
+			Msgbox ("schreibe Adresse des KMS Server in die Registry ...")
 			oShell.run "cscript " + KMSScript + " /sethst:" + kms_server,1,True
 			oShell.run "cscript " + KMSScript + " /setprt:" + kms_port,1,True
 		End if

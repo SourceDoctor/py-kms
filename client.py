@@ -99,6 +99,7 @@ def updateConfig():
 		config['KMSClientAppID'] = "55c92734-d682-4d71-983e-d6ec3f16059f"
 		config['KMSClientSkuID'] = "81671aaf-79d1-4eb1-b004-8cbbe173afea"
 		config['KMSClientKMSCountedID'] = "cb8fc780-2c05-495a-9710-85afffc904d7"
+
 	elif config['mode'] == 'Office2010':
 		config['RequiredClientCount'] = 5
 		config['KMSProtocolMajorVersion'] = 4
@@ -115,6 +116,15 @@ def updateConfig():
 		config['KMSClientAppID'] = "0ff1ce15-a989-479d-af46-f275c6370663"
 		config['KMSClientSkuID'] = "b322da9c-a2e2-4058-9e4e-f59a6970bd69"
 		config['KMSClientKMSCountedID'] = "e6a6f1bf-9d40-40c3-aa9f-c77ba21578c0"
+	elif config['mode'] == 'Office2019':
+		config['RequiredClientCount'] = 5
+		config['KMSProtocolMajorVersion'] = 6
+		config['KMSProtocolMinorVersion'] = 0
+		config['KMSClientLicenseStatus'] = 2
+		config['KMSClientAppID'] = "0ff1ce15-a989-479d-af46-f275c6370663"
+		config['KMSClientSkuID'] = "c3b2612d-58ee-4d9b-ad9d-7568decb29f7"
+		config['KMSClientKMSCountedID'] = "617d9eb1-ef36-4f82-86e0-a65ae07b96c6"
+
 
 def CreateRequestBase():
 	# Init requestDict
